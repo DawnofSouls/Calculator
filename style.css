@@ -126,9 +126,10 @@ body {
     width: 205px;
     height: 95px;
     border-radius: 100px;
+    padding-left: 40px;
 
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
