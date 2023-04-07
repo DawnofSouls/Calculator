@@ -3,6 +3,11 @@
     src: url('assets/fonts/SFNSText-Regular.otf');
 }
 
+@font-face {
+    font-family: "SFFontThin";
+    src: url('assets/fonts/SFNSDisplay-Thin.otf');
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -69,6 +74,6 @@ body {
     justify-content: end;
     align-items: end;
     
+    font-family: 'SFFontThin','Courier New', Courier, monospace;
     font-size: 75px;
-    font-weight: 10;
 }
