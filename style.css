@@ -52,15 +52,17 @@ body {
 
 #Calculator{
     width: 500px;
-    height: 1057px;
+    height: 950px;
     background-color: black;
-    border-radius: 70px;
+    border-radius: 50px;
 }
 
 #NotificationBar {
     display: flex;
     justify-content: space-between;
     padding: 25px 50px;
+
+    font-size: 15px;
 }
 
 #Screen{
@@ -87,7 +89,7 @@ body {
     display: flex;
     justify-content: space-around;
     
-    padding: 0px 15px;
+    padding: 6px 15px;
 
     font-size: 35px;
 }
@@ -121,7 +123,7 @@ body {
 
 .DarkGreyLong {
     background-color: #313131;
-    width: 190px;
+    width: 205px;
     height: 95px;
     border-radius: 100px;
 
