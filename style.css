@@ -68,7 +68,7 @@ body {
     color: black; */
     width: 100%;
     height: 300px;
-    padding: 10px 30px;
+    padding: 10px 40px;
 
     display: flex;
     justify-content: end;
@@ -77,3 +77,41 @@ body {
     font-family: 'SFFontThin','Courier New', Courier, monospace;
     font-size: 75px;
 }
+
+#FirstRow {
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 0px 15px;
+
+    font-size: 35px;
+}
+
+.Grey {
+    background-color: #a0a0a0;
+    color: black;
+    
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 50;
+
+}
+
+.Orange {
+    background-color: #f69906;
+    
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
