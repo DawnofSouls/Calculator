@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "SFFont";
+    font-family: "SFFontRegular";
     src: url('assets/fonts/SFNSText-Regular.otf');
 }
 
@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #ffffff; 
-    font-family: 'SFFont','Courier New', Courier, monospace;
+    font-family: 'SFFontRegular','Courier New', Courier, monospace;
 }
 
 #Calculator{
