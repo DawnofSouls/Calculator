@@ -68,14 +68,14 @@ body {
     color: black; */
     width: 100%;
     height: 300px;
-    padding: 10px 40px;
+    padding: 10px 48px;
 
     display: flex;
     justify-content: end;
     align-items: end;
     
     font-family: 'SFFontThin','Courier New', Courier, monospace;
-    font-size: 75px;
+    font-size: 90px;
 }
 
 #FirstRow {
@@ -101,6 +101,17 @@ body {
 
     font-weight: 50;
 
+}
+
+.DarkGrey {
+    background-color: #313131;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Orange {
