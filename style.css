@@ -119,6 +119,17 @@ body {
     align-items: center;
 }
 
+.DarkGreyLong {
+    background-color: #313131;
+    width: 190px;
+    height: 95px;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Orange {
     background-color: #f69906;
     
