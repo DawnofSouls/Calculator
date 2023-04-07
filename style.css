@@ -108,6 +108,7 @@ body {
 
     font-weight: 50;
 
+    transition: background-color .25s ease-in-out
 }
 
 .DarkGrey {
@@ -119,6 +120,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: background-color .25s ease-in-out
 }
 
 .DarkGreyLong {
@@ -131,6 +134,8 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+
+    transition: background-color .25s ease-in-out
 }
 
 .Orange {
@@ -143,5 +148,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: background-color .25s ease-in-out
 }
+
+.Orange:hover{
+    background-color: #fbc88e;
+}
+
+.Grey:hover{
+    background-color: #d9d9d9;
+}
+
+.DarkGrey:hover,.DarkGreyLong:hover{
+    background-color: #737373;
+}
+
 
