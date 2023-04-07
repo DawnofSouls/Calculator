@@ -78,7 +78,12 @@ body {
     font-size: 90px;
 }
 
-#FirstRow {
+#FirstRow,
+#SecondRow,
+#ThirdRow,
+#FourthRow,
+#FifthRow
+ {
     display: flex;
     justify-content: space-around;
     
