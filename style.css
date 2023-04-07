@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "SF-Font";
+    src: url('assets/fonts/san_francisco-webfont.woff') format(.woff);
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -26,7 +30,7 @@ input, button, textarea, select {
   }
 
 p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;g
+    overflow-wrap: break-word;
   }
 
 #root, #__next {
@@ -45,4 +49,10 @@ body {
     height: 1057px;
     background-color: black;
     border-radius: 70px;
+}
+
+#NotificationBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
 }
