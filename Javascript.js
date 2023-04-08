@@ -20,7 +20,10 @@ const Seven = document.getElementById("SevenButtons");
 const Eight = document.getElementById("EightButtons");
 const Nine = document.getElementById("NineButtons");
 
+// Input Number Screen
 const NumberScreen = document.getElementById("Input");
+let InputNumber = 0;
+NumberScreen.textContent = Number(InputNumber);
 
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
@@ -30,3 +33,53 @@ let TimeUpdate = () => {
 };
 setInterval(TimeUpdate, 1000);
 
+//Onclick Number Functions
+Zero.addEventListener("click", () => {
+  InputNumber += "0";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+One.addEventListener("click", () => {
+  InputNumber += "1";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Two.addEventListener("click", () => {
+  InputNumber += "2";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Three.addEventListener("click", () => {
+  InputNumber += "3";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Four.addEventListener("click", () => {
+  InputNumber += "4";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Five.addEventListener("click", () => {
+  InputNumber += "5";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Six.addEventListener("click", () => {
+  InputNumber += "6";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Seven.addEventListener("click", () => {
+  InputNumber += "7";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Eight.addEventListener("click", () => {
+  InputNumber += "8";
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Nine.addEventListener("click", () => {
+  InputNumber += "9";
+  NumberScreen.textContent = Number(InputNumber);
+});
