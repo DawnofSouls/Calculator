@@ -1,3 +1,4 @@
+// Calculator Keys
 const Clear = document.getElementById("ACButtons");
 const PlusMinus = document.getElementById("PlusMinusButtons");
 const Percentage = document.getElementById("PercentButtons");
@@ -19,9 +20,13 @@ const Seven = document.getElementById("SevenButtons");
 const Eight = document.getElementById("EightButtons");
 const Nine = document.getElementById("NineButtons");
 
+const NumberScreen = document.getElementById("Input");
+
+// Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
 let TimeUpdate = () => {
     Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
 };
-setInterval(TimeUpdate, 1000)
+setInterval(TimeUpdate, 1000);
+
