@@ -18,3 +18,10 @@ const Six = document.getElementById("SixButtons");
 const Seven = document.getElementById("SevenButtons");
 const Eight = document.getElementById("EightButtons");
 const Nine = document.getElementById("NineButtons");
+
+let Time = document.getElementById("Time");
+Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+let TimeUpdate = () => {
+    Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+};
+setInterval(TimeUpdate, 1000)
