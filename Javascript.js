@@ -83,3 +83,25 @@ Nine.addEventListener("click", () => {
   InputNumber += "9";
   NumberScreen.textContent = Number(InputNumber);
 });
+
+//Onclick Tools Functions
+Clear.addEventListener("click", () => {
+  InputNumber = 0;
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+PlusMinus.addEventListener("click", () => {
+  InputNumber = 0;
+  NumberScreen.textContent = Number(InputNumber);
+});
+
+Percentage.addEventListener("click", () => {
+  let InitialValue = NumberScreen.textContent;
+  let FinalValue;
+  FinalValue = InitialValue / 100;
+  NumberScreen.textContent = FinalValue;
+});
+
+Divide.addEventListener("click", () => {
+  
+});
