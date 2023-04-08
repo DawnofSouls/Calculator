@@ -28,6 +28,9 @@ NumberScreen.textContent = Number(InputNumber);
 //Operand Choice to determine how equal button works
 let OperandChoice;
 
+// Array Number to do the math
+let NumberList = [];
+
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
