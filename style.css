@@ -92,6 +92,13 @@ body {
     padding: 6px 15px;
 
     font-size: 35px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .Grey {
@@ -163,5 +170,3 @@ body {
 .DarkGrey:hover,.DarkGreyLong:hover{
     background-color: #737373;
 }
-
-
