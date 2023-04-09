@@ -189,21 +189,21 @@ Divide.addEventListener("click", () => {
 });
 
 Equal.addEventListener("click", () => {
-  if (OperandChoice === "Divide") {
-    NumberList.push(NumberScreen.textContent);
-    let Answer = NumberList[0] / NumberList[1];
-    if (Answer === Infinity) {
-      Answer = "Error";
-    }
-    RepeatedEqual = 1;
-    console.log(RepeatedEqual);
-    NumberScreen.textContent = Answer;
-    console.log(NumberList);
-
-    Equal.addEventListener("click", () => {
-      if (RepeatedEqual === 1) {
-        NumberScreen.textContent /= NumberList[1];
+  if (RepeatedEqual === 0) {
+    if (OperandChoice === "Divide") {
+      NumberList.push(NumberScreen.textContent);
+      let Answer = NumberList[0] / NumberList[1];
+      if (Answer === Infinity) {
+        Answer = "Error";
       }
-    });
+      RepeatedEqual = 1;
+      console.log(RepeatedEqual);
+      NumberScreen.textContent = Answer;
+      console.log(NumberList);
+    }
+  } else if (RepeatedEqual === 1) {
+    if (OperandChoice === "Divide") {
+      NumberScreen.textContent /= NumberList[1];
+    }
   }
 });
