@@ -182,13 +182,13 @@ Divide.addEventListener("click", () => {
 });
 
 Equal.addEventListener("click", () => {
-    if (OperandChoice === "Divide"){
-        NumberList.push(NumberScreen.textContent);
-        let Answer = NumberList[0] / NumberList[1];
-        if (Answer === Infinity){
-            Answer = "Error";
-        }
-        NumberScreen.textContent = Answer;
-        console.log(NumberList);
+  if (OperandChoice === "Divide") {
+    NumberList.push(NumberScreen.textContent);
+    let Answer = NumberList[0] / NumberList[1];
+    if (Answer === Infinity) {
+      Answer = "Error";
     }
-  });
+    NumberScreen.textContent = Answer;
+    console.log(NumberList);
+  }
+});
