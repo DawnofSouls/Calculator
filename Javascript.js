@@ -257,7 +257,7 @@ Equal.addEventListener("click", () => {
     } else if (OperandChoice === "Subtract") {
       NumberScreen.textContent -= NumberList[1];
     } else if (OperandChoice === "Addition") {
-      NumberScreen.textContent += NumberList[1];
+      NumberScreen.textContent = +NumberScreen.textContent + +NumberList[1];
     }
   }
 });
