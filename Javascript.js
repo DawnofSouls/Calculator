@@ -5,7 +5,7 @@ const Percentage = document.getElementById("PercentButtons");
 const Divide = document.getElementById("DivideButtons");
 const Multiply = document.getElementById("TimesButtons");
 const Subtract = document.getElementById("MinusButtons");
-const Plus = document.getElementById("PlusButtons");
+const Addition = document.getElementById("PlusButtons");
 const Decimal = document.getElementById("DecimalButtons");
 const Equal = document.getElementById("EqualButtons");
 
@@ -200,6 +200,12 @@ Subtract.addEventListener("click", () => {
   AoR = 1;
 });
 
+Addition.addEventListener("click", () => {
+  NumberList.push(NumberScreen.textContent);
+  OperandChoice = "Addition";
+  AoR = 1;
+});
+
 Equal.addEventListener("click", () => {
   if (RepeatedEqual === 0) {
     if (OperandChoice === "Divide") {
@@ -232,6 +238,16 @@ Equal.addEventListener("click", () => {
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
       console.log(NumberList);
+    } else if (OperandChoice === "Addition") {
+      NumberList.push(NumberScreen.textContent);
+      let Answer = +NumberList[0] + NumberList[1]/1;
+      if (Answer === Infinity) {
+        Answer = "Error";
+      }
+      RepeatedEqual = 1;
+      console.log(RepeatedEqual);
+      NumberScreen.textContent = Answer;
+      console.log(NumberList);
     }
   } else if (RepeatedEqual === 1) {
     if (OperandChoice === "Divide") {
@@ -240,6 +256,8 @@ Equal.addEventListener("click", () => {
       NumberScreen.textContent *= NumberList[1];
     } else if (OperandChoice === "Subtract") {
       NumberScreen.textContent -= NumberList[1];
+    } else if (OperandChoice === "Addition") {
+      NumberScreen.textContent += NumberList[1];
     }
   }
 });
