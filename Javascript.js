@@ -36,6 +36,10 @@ let NumberList = [];
 // if you press 10 then press divide button and then 5, instead of 105, it will be 5
 let AoR = 0;
 
+//Repeated Equal activation when it's equal to RepeatedEqual = 1. 
+//ex: 100/2 = 50 = 25 = 12.5 = 6.25 and so on
+let RepeatedEqual = 0;
+
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
@@ -159,9 +163,11 @@ Nine.addEventListener("click", () => {
 Clear.addEventListener("click", () => {
   InputNumber = 0;
   AoR = 0;
+  RepeatedEqual = 0;
+  console.log(RepeatedEqual);
   NumberList = [];
   OperandChoice = '';
-  NumberScreen.textContent = Number(InputNumber);
+  NumberScreen.textContent = 0;
 });
 
 // PlusMinus.addEventListener("click", () => {
@@ -189,7 +195,15 @@ Equal.addEventListener("click", () => {
     if (Answer === Infinity) {
       Answer = "Error";
     }
+    RepeatedEqual = 1;
+    console.log(RepeatedEqual);
     NumberScreen.textContent = Answer;
     console.log(NumberList);
+
+    Equal.addEventListener("click", () => {
+      if (RepeatedEqual === 1) {
+        NumberScreen.textContent /= NumberList[1];
+      }
+    });
   }
 });
