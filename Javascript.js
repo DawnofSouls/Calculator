@@ -158,6 +158,7 @@ Nine.addEventListener("click", () => {
 //Onclick Tools Functions
 Clear.addEventListener("click", () => {
   InputNumber = 0;
+  AoR = 0;
   NumberList = [];
   OperandChoice = '';
   NumberScreen.textContent = Number(InputNumber);
