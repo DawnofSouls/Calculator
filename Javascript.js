@@ -4,7 +4,7 @@ const PlusMinus = document.getElementById("PlusMinusButtons");
 const Percentage = document.getElementById("PercentButtons");
 const Divide = document.getElementById("DivideButtons");
 const Multiply = document.getElementById("TimesButtons");
-const Minus = document.getElementById("MinusButtons");
+const Subtract = document.getElementById("MinusButtons");
 const Plus = document.getElementById("PlusButtons");
 const Decimal = document.getElementById("DecimalButtons");
 const Equal = document.getElementById("EqualButtons");
@@ -31,20 +31,20 @@ let OperandChoice;
 // Array Number to do the math
 let NumberList = [];
 
-//Add or Replace the number shown on screen. If AoR = 0, add number to value. For example, 
+//Add or Replace the number shown on screen. If AoR = 0, add number to value. For example,
 // continuously pressing eight will get 8888. If AoR = 1, which only happens after you press an operation. In this case,
 // if you press 10 then press divide button and then 5, instead of 105, it will be 5
 let AoR = 0;
 
-//Repeated Equal activation when it's equal to RepeatedEqual = 1. 
+//Repeated Equal activation when it's equal to RepeatedEqual = 1.
 //ex: 100/2 = 50 = 25 = 12.5 = 6.25 and so on
 let RepeatedEqual = 0;
 
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
-Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, "$1");
 let TimeUpdate = () => {
-    Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+  Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, "$1");
 };
 setInterval(TimeUpdate, 1000);
 
@@ -166,7 +166,7 @@ Clear.addEventListener("click", () => {
   RepeatedEqual = 0;
   console.log(RepeatedEqual);
   NumberList = [];
-  OperandChoice = '';
+  OperandChoice = "";
   NumberScreen.textContent = 0;
 });
 
@@ -189,10 +189,16 @@ Divide.addEventListener("click", () => {
 });
 
 Multiply.addEventListener("click", () => {
-    NumberList.push(NumberScreen.textContent);
-    OperandChoice = "Multiply";
-    AoR = 1;
-  });
+  NumberList.push(NumberScreen.textContent);
+  OperandChoice = "Multiply";
+  AoR = 1;
+});
+
+Subtract.addEventListener("click", () => {
+  NumberList.push(NumberScreen.textContent);
+  OperandChoice = "Subtract";
+  AoR = 1;
+});
 
 Equal.addEventListener("click", () => {
   if (RepeatedEqual === 0) {
@@ -216,12 +222,24 @@ Equal.addEventListener("click", () => {
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
       console.log(NumberList);
+    } else if (OperandChoice === "Subtract") {
+      NumberList.push(NumberScreen.textContent);
+      let Answer = NumberList[0] - NumberList[1];
+      if (Answer === Infinity) {
+        Answer = "Error";
+      }
+      RepeatedEqual = 1;
+      console.log(RepeatedEqual);
+      NumberScreen.textContent = Answer;
+      console.log(NumberList);
     }
   } else if (RepeatedEqual === 1) {
     if (OperandChoice === "Divide") {
       NumberScreen.textContent /= NumberList[1];
-    } else if (OperandChoice === "Multiply"){
-        NumberScreen.textContent *= NumberList[1];
+    } else if (OperandChoice === "Multiply") {
+      NumberScreen.textContent *= NumberList[1];
+    } else if (OperandChoice === "Subtract") {
+      NumberScreen.textContent -= NumberList[1];
     }
   }
 });
