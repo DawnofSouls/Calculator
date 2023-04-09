@@ -93,6 +93,8 @@ Nine.addEventListener("click", () => {
 //Onclick Tools Functions
 Clear.addEventListener("click", () => {
   InputNumber = 0;
+  NumberList = [];
+  OperandChoice = '';
   NumberScreen.textContent = Number(InputNumber);
 });
 
@@ -109,5 +111,13 @@ Percentage.addEventListener("click", () => {
 });
 
 Divide.addEventListener("click", () => {
-  
+  NumberList.push(NumberScreen.textContent);
+  OperandChoice = "Divide";
 });
+
+Equal.addEventListener("click", () => {
+    if (OperandChoice === "Divide"){
+        let Answer = NumberList[0] / NumberList[1];
+        NumberScreen.textContent = Number(Answer);
+    }
+  });
