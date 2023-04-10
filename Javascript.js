@@ -36,6 +36,9 @@ let NumberList = [];
 // if you press 10 then press divide button and then 5, instead of 105, it will be 5
 let AoR = 0;
 
+//Decimal Switch. Once it equals to 1, you can no longer enter decimal until you press Clear button
+let DecimalSwitch = 0;
+
 //Repeated Equal activation when it's equal to RepeatedEqual = 1.
 //ex: 100/2 = 50 = 25 = 12.5 = 6.25 and so on
 let RepeatedEqual = 0;
@@ -167,6 +170,7 @@ Clear.addEventListener("click", () => {
   console.log(RepeatedEqual);
   NumberList = [];
   OperandChoice = "";
+  DecimalSwitch = 0;
   NumberScreen.textContent = 0;
 });
 
@@ -211,6 +215,16 @@ Addition.addEventListener("click", () => {
   NumberList.push(NumberScreen.textContent);
   OperandChoice = "Addition";
   AoR = 1;
+});
+
+Decimal.addEventListener("click", () => {
+  if (DecimalSwitch === 0) {
+    InputNumber += ".";
+    DecimalSwitch = 1;
+    NumberScreen.textContent = InputNumber;
+  } else if (DecimalSwitch === 1) {
+    // You can place decimal until you press clear
+  }
 });
 
 Equal.addEventListener("click", () => {
