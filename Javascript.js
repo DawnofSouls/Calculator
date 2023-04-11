@@ -273,12 +273,72 @@ Equal.addEventListener("click", () => {
   } else if (RepeatedEqual === 1) {
     if (OperandChoice === "Divide") {
       NumberScreen.textContent /= NumberList[1];
+      Multiply.onclick = () => {
+        console.log("Set to Multiplication");
+        RepeatedEqual = 0;
+        OperandChoice = "Multiply";
+      };
+      Subtract.onclick = () => {
+        console.log("Set to Subtract");
+        RepeatedEqual = 0;
+        OperandChoice = "Subtract";
+      };
+      Addition.onclick = () => {
+        console.log("Set to Addition");
+        RepeatedEqual = 0;
+        OperandChoice = "Addition";
+      };
     } else if (OperandChoice === "Multiply") {
       NumberScreen.textContent *= NumberList[1];
+      Divide.onclick = () => {
+        console.log("Set to Divide");
+        RepeatedEqual = 0;
+        OperandChoice = "Divide";
+      };
+      Subtract.onclick = () => {
+        console.log("Set to Subtract");
+        RepeatedEqual = 0;
+        OperandChoice = "Subtract";
+      };
+      Addition.onclick = () => {
+        console.log("Set to Addition");
+        RepeatedEqual = 0;
+        OperandChoice = "Addition";
+      };
     } else if (OperandChoice === "Subtract") {
       NumberScreen.textContent -= NumberList[1];
+      Multiply.onclick = () => {
+        console.log("Set to Multiply");
+        RepeatedEqual = 0;
+        OperandChoice = "Multiply";
+      };
+      Divide.onclick = () => {
+        console.log("Set to Divide");
+        RepeatedEqual = 0;
+        OperandChoice = "Divide";
+      };
+      Addition.onclick = () => {
+        console.log("Set to Addition");
+        RepeatedEqual = 0;
+        OperandChoice = "Addition";
+      };
     } else if (OperandChoice === "Addition") {
       NumberScreen.textContent = +NumberScreen.textContent + +NumberList[1];
+      Multiply.onclick = () => {
+        console.log("Set to Multiply");
+        RepeatedEqual = 0;
+        OperandChoice = "Multiply";
+      };
+      Divide.onclick = () => {
+        console.log("Set to Divide");
+        RepeatedEqual = 0;
+        OperandChoice = "Divide";
+      };
+      Subtract.onclick = () => {
+        console.log("Set to Subtract");
+        RepeatedEqual = 0;
+        OperandChoice = "Subtract";
+      };
     }
   }
 });
