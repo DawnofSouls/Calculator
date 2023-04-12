@@ -235,6 +235,7 @@ Equal.addEventListener("click", () => {
       if (Answer === Infinity) {
         Answer = "Error";
       }
+      NumberList.push(Answer);
       RepeatedEqual = 1;
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
@@ -245,6 +246,7 @@ Equal.addEventListener("click", () => {
       if (Answer === Infinity) {
         Answer = "Error";
       }
+      NumberList.push(Answer);
       RepeatedEqual = 1;
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
@@ -255,6 +257,7 @@ Equal.addEventListener("click", () => {
       if (Answer === Infinity) {
         Answer = "Error";
       }
+      NumberList.push(Answer);
       RepeatedEqual = 1;
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
@@ -265,6 +268,7 @@ Equal.addEventListener("click", () => {
       if (Answer === Infinity) {
         Answer = "Error";
       }
+      NumberList.push(Answer);
       RepeatedEqual = 1;
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
