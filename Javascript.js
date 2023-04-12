@@ -276,7 +276,9 @@ Equal.addEventListener("click", () => {
     }
   } else if (RepeatedEqual === 1) {
     if (OperandChoice === "Divide") {
-      NumberScreen.textContent /= NumberList[1];
+      let Answers = NumberList[NumberList.length-1]/NumberList[1];
+      NumberScreen.textContent = Answers;
+      NumberList.push(Answers);
       Multiply.onclick = () => {
         console.log("Set to Multiplication");
         RepeatedEqual = 0;
@@ -293,7 +295,9 @@ Equal.addEventListener("click", () => {
         OperandChoice = "Addition";
       };
     } else if (OperandChoice === "Multiply") {
-      NumberScreen.textContent *= NumberList[1];
+      let Answers = NumberList[NumberList.length-1]*NumberList[1];
+      NumberScreen.textContent = Answers;
+      NumberList.push(Answers);
       Divide.onclick = () => {
         console.log("Set to Divide");
         RepeatedEqual = 0;
@@ -310,7 +314,9 @@ Equal.addEventListener("click", () => {
         OperandChoice = "Addition";
       };
     } else if (OperandChoice === "Subtract") {
-      NumberScreen.textContent -= NumberList[1];
+      let Answers = NumberList[NumberList.length-1]-NumberList[1];
+      NumberScreen.textContent = Answers;
+      NumberList.push(Answers);
       Multiply.onclick = () => {
         console.log("Set to Multiply");
         RepeatedEqual = 0;
@@ -327,7 +333,9 @@ Equal.addEventListener("click", () => {
         OperandChoice = "Addition";
       };
     } else if (OperandChoice === "Addition") {
-      NumberScreen.textContent = +NumberScreen.textContent + +NumberList[1];
+      let Answers = +NumberList[NumberList.length-1] + +NumberList[1];
+      NumberScreen.textContent = Answers;
+      NumberList.push(Answers);
       Multiply.onclick = () => {
         console.log("Set to Multiply");
         RepeatedEqual = 0;
