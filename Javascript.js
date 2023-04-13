@@ -43,6 +43,11 @@ let DecimalSwitch = 0;
 //ex: 100/2 = 50 = 25 = 12.5 = 6.25 and so on
 let RepeatedEqual = 0;
 
+// Array Switch. Basically once you press any operand on the second onclick, it will replace NumberSwitch[1] with a a new number.
+// Ex: 10 * 2 = 20: [10, 2, 20, 40, 80, 160....] amd so on but if you want to switch to another operation in midst of it, lets say we press divide then
+// four and press equal, it will become [10, 4, 20, 40, 80, 160, (this is where we pressed divide then 4) 40, 10, 2.5, 0.625] 
+let replaceOnDoubleOperand = 0;
+
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, "$1");
@@ -229,7 +234,7 @@ Decimal.addEventListener("click", () => {
 
 Equal.addEventListener("click", () => {
   if (RepeatedEqual === 0) {
-    
+
     if (OperandChoice === "Divide") {
       NumberList.push(NumberScreen.textContent);
       let Answer = NumberList[0] / NumberList[1];
