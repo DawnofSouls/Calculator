@@ -375,5 +375,3 @@ Equal.addEventListener("click", () => {
     }
   }
 });
-
-test
