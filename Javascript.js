@@ -229,6 +229,7 @@ Decimal.addEventListener("click", () => {
 
 Equal.addEventListener("click", () => {
   if (RepeatedEqual === 0) {
+    
     if (OperandChoice === "Divide") {
       NumberList.push(NumberScreen.textContent);
       let Answer = NumberList[0] / NumberList[1];
@@ -240,6 +241,7 @@ Equal.addEventListener("click", () => {
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
       console.log(NumberList);
+
     } else if (OperandChoice === "Multiply") {
       NumberList.push(NumberScreen.textContent);
       let Answer = NumberList[0] * NumberList[1];
@@ -251,6 +253,7 @@ Equal.addEventListener("click", () => {
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
       console.log(NumberList);
+
     } else if (OperandChoice === "Subtract") {
       NumberList.push(NumberScreen.textContent);
       let Answer = NumberList[0] - NumberList[1];
@@ -262,6 +265,7 @@ Equal.addEventListener("click", () => {
       console.log(RepeatedEqual);
       NumberScreen.textContent = Answer;
       console.log(NumberList);
+
     } else if (OperandChoice === "Addition") {
       NumberList.push(NumberScreen.textContent);
       let Answer = +NumberList[0] + NumberList[1]/1;
@@ -294,6 +298,7 @@ Equal.addEventListener("click", () => {
         RepeatedEqual = 0;
         OperandChoice = "Addition";
       };
+
     } else if (OperandChoice === "Multiply") {
       let Answers = NumberList[NumberList.length-1]*NumberList[1];
       NumberScreen.textContent = Answers;
@@ -313,6 +318,7 @@ Equal.addEventListener("click", () => {
         RepeatedEqual = 0;
         OperandChoice = "Addition";
       };
+
     } else if (OperandChoice === "Subtract") {
       let Answers = NumberList[NumberList.length-1]-NumberList[1];
       NumberScreen.textContent = Answers;
@@ -332,6 +338,7 @@ Equal.addEventListener("click", () => {
         RepeatedEqual = 0;
         OperandChoice = "Addition";
       };
+
     } else if (OperandChoice === "Addition") {
       let Answers = +NumberList[NumberList.length-1] + +NumberList[1];
       NumberScreen.textContent = Answers;
