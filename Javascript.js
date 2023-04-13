@@ -58,7 +58,6 @@ setInterval(TimeUpdate, 1000);
 
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "0";
     NumberScreen.textContent = Number(InputNumber);
@@ -70,7 +69,6 @@ Zero.addEventListener("click", () => {
 });
 
 One.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "1";
     NumberScreen.textContent = Number(InputNumber);
@@ -82,7 +80,6 @@ One.addEventListener("click", () => {
 });
 
 Two.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "2";
     NumberScreen.textContent = Number(InputNumber);
@@ -94,7 +91,6 @@ Two.addEventListener("click", () => {
 });
 
 Three.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "3";
     NumberScreen.textContent = Number(InputNumber);
@@ -106,7 +102,6 @@ Three.addEventListener("click", () => {
 });
 
 Four.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "4";
     NumberScreen.textContent = Number(InputNumber);
@@ -118,7 +113,6 @@ Four.addEventListener("click", () => {
 });
 
 Five.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "5";
     NumberScreen.textContent = Number(InputNumber);
@@ -130,7 +124,6 @@ Five.addEventListener("click", () => {
 });
 
 Six.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "6";
     NumberScreen.textContent = Number(InputNumber);
@@ -142,7 +135,6 @@ Six.addEventListener("click", () => {
 });
 
 Seven.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "7";
     NumberScreen.textContent = Number(InputNumber);
@@ -154,7 +146,6 @@ Seven.addEventListener("click", () => {
 });
 
 Eight.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "8";
     NumberScreen.textContent = Number(InputNumber);
@@ -166,7 +157,6 @@ Eight.addEventListener("click", () => {
 });
 
 Nine.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
   if (AoR === 0) {
     InputNumber += "9";
     NumberScreen.textContent = Number(InputNumber);
@@ -179,6 +169,7 @@ Nine.addEventListener("click", () => {
 
 //Onclick Tools Functions
 Clear.addEventListener("click", () => {
+  replaceOnDoubleOperand = 0;
   InputNumber = 0;
   AoR = 0;
   RepeatedEqual = 0;
@@ -209,24 +200,32 @@ PlusMinus.addEventListener("click", () => {
   });  
 
 Divide.addEventListener("click", () => {
+  replaceOnDoubleOperand++;
+  console.log(replaceOnDoubleOperand);
   NumberList.push(NumberScreen.textContent);
   OperandChoice = "Divide";
   AoR = 1;
 });
 
 Multiply.addEventListener("click", () => {
+  replaceOnDoubleOperand++;
+  console.log(replaceOnDoubleOperand);
   NumberList.push(NumberScreen.textContent);
   OperandChoice = "Multiply";
   AoR = 1;
 });
 
 Subtract.addEventListener("click", () => {
+  replaceOnDoubleOperand++;
+  console.log(replaceOnDoubleOperand);
   NumberList.push(NumberScreen.textContent);
   OperandChoice = "Subtract";
   AoR = 1;
 });
 
 Addition.addEventListener("click", () => {
+  replaceOnDoubleOperand++;
+  console.log(replaceOnDoubleOperand);
   NumberList.push(NumberScreen.textContent);
   OperandChoice = "Addition";
   AoR = 1;
