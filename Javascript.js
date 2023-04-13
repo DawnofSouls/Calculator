@@ -297,7 +297,7 @@ Equal.addEventListener("click", () => {
     }
   } else if (RepeatedEqual === 1) {
     if (OperandChoice === "Divide") {
-      if(replaceOnDoubleOperand >= 2){
+      if(replaceOnDoubleOperand === 2){
         let Numbers = NumberScreen.textContent;
         NumberListTwo.push(Numbers);
         NumberScreen.textContent = NumberList[NumberList.length-1] / NumberListTwo[NumberListTwo.length-1];
@@ -324,7 +324,7 @@ Equal.addEventListener("click", () => {
       };
 
     } else if (OperandChoice === "Multiply") {
-      if(replaceOnDoubleOperand >= 2){
+      if(replaceOnDoubleOperand === 2){
         let Numbers = NumberScreen.textContent;
         NumberListTwo.push(Numbers);
         NumberScreen.textContent = NumberList[NumberList.length-1] * NumberListTwo[NumberListTwo.length-1];
@@ -351,7 +351,7 @@ Equal.addEventListener("click", () => {
       };
 
     } else if (OperandChoice === "Subtract") {
-      if(replaceOnDoubleOperand >= 2){
+      if(replaceOnDoubleOperand === 2){
         let Numbers = NumberScreen.textContent;
         NumberListTwo.push(Numbers);
         NumberScreen.textContent = NumberList[NumberList.length-1] - NumberListTwo[NumberListTwo.length-1];
@@ -378,7 +378,7 @@ Equal.addEventListener("click", () => {
       };
 
     } else if (OperandChoice === "Addition") {
-      if(replaceOnDoubleOperand >= 2){
+      if(replaceOnDoubleOperand === 2){
         let Numbers = NumberScreen.textContent;
         NumberListTwo.push(Numbers);
         NumberScreen.textContent = +NumberList[NumberList.length-1] + +NumberListTwo[NumberListTwo.length-1];
