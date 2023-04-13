@@ -31,6 +31,9 @@ let OperandChoice;
 // Array Number to do the math
 let NumberList = [];
 
+//ArrayList to do math when you press another operation in middle of repeated Equal
+let NumberListTwo = [];
+
 //Add or Replace the number shown on screen. If AoR = 0, add number to value. For example,
 // continuously pressing eight will get 8888. If AoR = 1, which only happens after you press an operation. In this case,
 // if you press 10 then press divide button and then 5, instead of 105, it will be 5
@@ -294,9 +297,16 @@ Equal.addEventListener("click", () => {
     }
   } else if (RepeatedEqual === 1) {
     if (OperandChoice === "Divide") {
-      let Answers = NumberList[NumberList.length-1]/NumberList[1];
-      NumberScreen.textContent = Answers;
-      NumberList.push(Answers);
+      if(replaceOnDoubleOperand >= 2){
+        let Numbers = NumberScreen.textContent;
+        NumberListTwo.push(Numbers);
+        NumberScreen.textContent = NumberList[NumberList.length-1] / NumberListTwo[NumberListTwo.length-1];
+      } else {
+        let Answers = NumberList[NumberList.length-1]/NumberList[1];
+        NumberScreen.textContent = Answers;
+        NumberList.push(Answers);
+      }
+
       Multiply.onclick = () => {
         console.log("Set to Multiplication");
         RepeatedEqual = 0;
@@ -314,9 +324,16 @@ Equal.addEventListener("click", () => {
       };
 
     } else if (OperandChoice === "Multiply") {
-      let Answers = NumberList[NumberList.length-1]*NumberList[1];
-      NumberScreen.textContent = Answers;
-      NumberList.push(Answers);
+      if(replaceOnDoubleOperand >= 2){
+        let Numbers = NumberScreen.textContent;
+        NumberListTwo.push(Numbers);
+        NumberScreen.textContent = NumberList[NumberList.length-1] * NumberListTwo[NumberListTwo.length-1];
+      } else {
+        let Answers = NumberList[NumberList.length-1]*NumberList[1];
+        NumberScreen.textContent = Answers;
+        NumberList.push(Answers);
+      }
+
       Divide.onclick = () => {
         console.log("Set to Divide");
         RepeatedEqual = 0;
@@ -334,9 +351,16 @@ Equal.addEventListener("click", () => {
       };
 
     } else if (OperandChoice === "Subtract") {
+      if(replaceOnDoubleOperand >= 2){
+        let Numbers = NumberScreen.textContent;
+        NumberListTwo.push(Numbers);
+        NumberScreen.textContent = NumberList[NumberList.length-1] - NumberListTwo[NumberListTwo.length-1];
+      } else {
       let Answers = NumberList[NumberList.length-1]-NumberList[1];
       NumberScreen.textContent = Answers;
       NumberList.push(Answers);
+      }
+
       Multiply.onclick = () => {
         console.log("Set to Multiply");
         RepeatedEqual = 0;
@@ -354,9 +378,16 @@ Equal.addEventListener("click", () => {
       };
 
     } else if (OperandChoice === "Addition") {
+      if(replaceOnDoubleOperand >= 2){
+        let Numbers = NumberScreen.textContent;
+        NumberListTwo.push(Numbers);
+        NumberScreen.textContent = +NumberList[NumberList.length-1] + +NumberListTwo[NumberListTwo.length-1];
+      } else {
       let Answers = +NumberList[NumberList.length-1] + +NumberList[1];
       NumberScreen.textContent = Answers;
       NumberList.push(Answers);
+      }
+      
       Multiply.onclick = () => {
         console.log("Set to Multiply");
         RepeatedEqual = 0;
