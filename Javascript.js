@@ -179,7 +179,6 @@ Clear.addEventListener("click", () => {
   console.log(RepeatedEqual);
   NumberList = [];
   OperandChoice = "";
-  DecimalSwitch = 0;
   NumberScreen.textContent = 0;
 });
 
