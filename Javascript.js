@@ -183,11 +183,6 @@ Clear.addEventListener("click", () => {
   NumberScreen.textContent = 0;
 });
 
-// PlusMinus.addEventListener("click", () => {
-//   InputNumber = 0;
-//   NumberScreen.textContent = Number(InputNumber);
-// });
-
 Percentage.addEventListener("click", () => {
   let InitialValue = NumberScreen.textContent;
   let FinalValue;
