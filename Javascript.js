@@ -40,7 +40,7 @@ let NumberListTwo = [];
 let AoR = 0;
 
 //Decimal Switch. Once it equals to 1, you can no longer enter decimal until you press Clear button
-let DecimalSwitch = 0;
+let DecimalSwitch = 0; //DEPRECATED 
 
 //Repeated Equal activation when it's equal to RepeatedEqual = 1.
 //ex: 100/2 = 50 = 25 = 12.5 = 6.25 and so on
@@ -239,7 +239,6 @@ Decimal.addEventListener("click", () => {
     // nothing happens
   }else{
     InputNumber += ".";
-    DecimalSwitch = 1;
     NumberScreen.textContent = InputNumber;
   }
 });
