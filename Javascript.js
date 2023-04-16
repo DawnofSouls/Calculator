@@ -28,10 +28,10 @@ NumberScreen.textContent = Number(InputNumber);
 //Operand Choice to determine how equal button works
 let OperandChoice;
 
-// Array Number to do the math
+// Array where you add Input value to
 let NumberList = [];
 
-//ArrayList to do math when you press another operation in middle of repeated Equal
+// Array where the answers are placed 
 let NumberListTwo = [];
 
 //Add or Replace the number shown on screen. If AoR = 0, add number to value. For example,
@@ -237,3 +237,6 @@ Decimal.addEventListener("click", () => {
   }
 });
 
+Equal.addEventListener('click', () => {
+
+});
