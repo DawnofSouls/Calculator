@@ -235,12 +235,12 @@ Addition.addEventListener("click", () => {
 });
 
 Decimal.addEventListener("click", () => {
-  if (DecimalSwitch === 0) {
+  if (NumberScreen.textContent.includes('.')){
+    // nothing happens
+  }else{
     InputNumber += ".";
     DecimalSwitch = 1;
     NumberScreen.textContent = InputNumber;
-  } else if (DecimalSwitch === 1) {
-    // You can place decimal until you press clear
   }
 });
 
