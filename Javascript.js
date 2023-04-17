@@ -61,6 +61,7 @@ setInterval(TimeUpdate, 1000);
 
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "0";
     NumberScreen.textContent = Number(InputNumber);
@@ -72,6 +73,7 @@ Zero.addEventListener("click", () => {
 });
 
 One.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "1";
     NumberScreen.textContent = Number(InputNumber);
@@ -83,6 +85,7 @@ One.addEventListener("click", () => {
 });
 
 Two.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "2";
     NumberScreen.textContent = Number(InputNumber);
@@ -94,6 +97,7 @@ Two.addEventListener("click", () => {
 });
 
 Three.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "3";
     NumberScreen.textContent = Number(InputNumber);
@@ -105,6 +109,7 @@ Three.addEventListener("click", () => {
 });
 
 Four.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "4";
     NumberScreen.textContent = Number(InputNumber);
@@ -116,6 +121,7 @@ Four.addEventListener("click", () => {
 });
 
 Five.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "5";
     NumberScreen.textContent = Number(InputNumber);
@@ -127,6 +133,7 @@ Five.addEventListener("click", () => {
 });
 
 Six.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "6";
     NumberScreen.textContent = Number(InputNumber);
@@ -138,6 +145,7 @@ Six.addEventListener("click", () => {
 });
 
 Seven.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "7";
     NumberScreen.textContent = Number(InputNumber);
@@ -149,6 +157,7 @@ Seven.addEventListener("click", () => {
 });
 
 Eight.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "8";
     NumberScreen.textContent = Number(InputNumber);
@@ -160,6 +169,7 @@ Eight.addEventListener("click", () => {
 });
 
 Nine.addEventListener("click", () => {
+  RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "9";
     NumberScreen.textContent = Number(InputNumber);
