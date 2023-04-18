@@ -268,13 +268,16 @@ Subtract.addEventListener("click", () => {
 });
 
 Addition.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
-  console.log(replaceOnDoubleOperand);
-
-  NumberList.push(NumberScreen.textContent);
-
-  OperandChoice = "Addition";
-  AoR = 1;
+  if (NumberListTwo >= 1){
+    OperandChoice = "Addition";
+    AoR = 1;
+  }else {
+    replaceOnDoubleOperand++;
+    console.log(replaceOnDoubleOperand);
+    NumberList.push(NumberScreen.textContent);
+    OperandChoice = "Addition";
+    AoR = 1;
+  }
 });
 
 Decimal.addEventListener("click", () => {
