@@ -242,13 +242,16 @@ Divide.addEventListener("click", () => {
 // });
 
 Multiply.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
-  console.log(replaceOnDoubleOperand);
-
-  NumberList.push(NumberScreen.textContent);
-
-  OperandChoice = "Multiply";
-  AoR = 1;
+  if (NumberListTwo >= 1){
+    OperandChoice = "Multiply";
+    AoR = 1;
+  }else {
+    replaceOnDoubleOperand++;
+    console.log(replaceOnDoubleOperand);
+    NumberList.push(NumberScreen.textContent);
+    OperandChoice = "Multiply";
+    AoR = 1;
+  }
 });
 
 Subtract.addEventListener("click", () => {
