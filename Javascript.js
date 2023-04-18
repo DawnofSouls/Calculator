@@ -338,11 +338,19 @@ Equal.addEventListener('click', () => {
     }
 
     else if (OperandChoice === "Addition"){
-      NumberList.push(NumberScreen.textContent);
-      let Answers = +NumberList[ArrayIncrementOnEqual] + +NumberList[NumberList.length-1];
-      NumberListTwo.push(Answers);
-      NumberScreen.textContent = Answers;
-      ArrayIncrementOnEqual++;
+      if (NumberListTwo.length >= 1){
+        NumberList.push(NumberScreen.textContent);
+        let Answers = +NumberListTwo[NumberListTwo.length-1] + +NumberList[NumberList.length-1];
+        NumberListTwo.push(Answers);
+        NumberScreen.textContent = Answers;
+      } else {
+        NumberList.push(NumberScreen.textContent);
+        let Answers = +NumberList[ArrayIncrementOnEqual] + +NumberList[NumberList.length-1];
+        NumberListTwo.push(Answers);
+        NumberScreen.textContent = Answers;
+        ArrayIncrementOnEqual++;
+      }
     }
+
   });
 
