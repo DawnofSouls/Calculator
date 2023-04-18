@@ -232,7 +232,7 @@ Multiply.addEventListener("click", () => {
   replaceOnDoubleOperand++;
   console.log(replaceOnDoubleOperand);
 
-    NumberList.push(NumberScreen.textContent);
+  NumberList.push(NumberScreen.textContent);
 
   OperandChoice = "Multiply";
   AoR = 1;
