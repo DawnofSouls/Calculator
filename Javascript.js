@@ -307,13 +307,21 @@ Equal.addEventListener('click', () => {
       }
     }
 
-    else if (OperandChoice === "Multiply"){
-      NumberList.push(NumberScreen.textContent);
-      let Answers = NumberList[ArrayIncrementOnEqual] * NumberList[NumberList.length-1];
-      NumberListTwo.push(Answers);
-      NumberScreen.textContent = Answers;
-      ArrayIncrementOnEqual++;
+    if (OperandChoice === "Multiply" ){
+      if (NumberListTwo.length >= 1){
+        NumberList.push(NumberScreen.textContent);
+        let Answers = NumberListTwo[NumberListTwo.length-1] * NumberList[NumberList.length-1];
+        NumberListTwo.push(Answers);
+        NumberScreen.textContent = Answers;
+      } else {
+        NumberList.push(NumberScreen.textContent);
+        let Answers = NumberList[ArrayIncrementOnEqual] * NumberList[NumberList.length-1];
+        NumberListTwo.push(Answers);
+        NumberScreen.textContent = Answers;
+        ArrayIncrementOnEqual++;
+      }
     }
+
     else if (OperandChoice === "Subtract"){
       NumberList.push(NumberScreen.textContent);
       let Answers = NumberList[ArrayIncrementOnEqual] - NumberList[NumberList.length-1];
