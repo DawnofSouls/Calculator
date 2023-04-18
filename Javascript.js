@@ -219,14 +219,27 @@ PlusMinus.addEventListener("click", () => {
   });  
 
 Divide.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
-  console.log(replaceOnDoubleOperand);
-
-  NumberList.push(NumberScreen.textContent);
-
-  OperandChoice = "Divide";
-  AoR = 1;
+  if (NumberListTwo >= 1){
+    OperandChoice = "Divide";
+    AoR = 1;
+  }else {
+    replaceOnDoubleOperand++;
+    console.log(replaceOnDoubleOperand);
+    NumberList.push(NumberScreen.textContent);
+    OperandChoice = "Divide";
+    AoR = 1;
+  }
 });
+
+// Divide.addEventListener("click", () => {
+//   replaceOnDoubleOperand++;
+//   console.log(replaceOnDoubleOperand);
+
+//   NumberList.push(NumberScreen.textContent);
+
+//   OperandChoice = "Divide";
+//   AoR = 1;
+// });
 
 Multiply.addEventListener("click", () => {
   replaceOnDoubleOperand++;
