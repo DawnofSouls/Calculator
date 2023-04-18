@@ -255,13 +255,16 @@ Multiply.addEventListener("click", () => {
 });
 
 Subtract.addEventListener("click", () => {
-  replaceOnDoubleOperand++;
-  console.log(replaceOnDoubleOperand);
-
-  NumberList.push(NumberScreen.textContent);
-
-  OperandChoice = "Subtract";
-  AoR = 1;
+  if (NumberListTwo >= 1){
+    OperandChoice = "Subtract";
+    AoR = 1;
+  }else {
+    replaceOnDoubleOperand++;
+    console.log(replaceOnDoubleOperand);
+    NumberList.push(NumberScreen.textContent);
+    OperandChoice = "Subtract";
+    AoR = 1;
+  }
 });
 
 Addition.addEventListener("click", () => {
