@@ -51,6 +51,16 @@ let RepeatedEqual = 0;
 // four and press equal, it will become [10, 4, 20, 40, 80, 160, (this is where we pressed divide then 4) 40, 10, 2.5, 0.625] 
 let replaceOnDoubleOperand = 0; //MAY BE DEPRECATED
 
+//This moves to the next array for NumberList
+let ArrayIncrementOnEqual = 0;
+
+//This switch is going to determine whether we add the NumberScreen.txt content to NumberList or NumberListTwo array. If it's
+// 1, it pushes to NumberList, if it's -1, it pushes to NumberListTwo
+let PushToOneOrTwo = 1;
+
+//Allows to successfully switch to another array when in middle of switching to another operand without clearing
+let OperandSwitch = 0;
+
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, "$1");
@@ -188,8 +198,10 @@ Clear.addEventListener("click", () => {
   RepeatedEqual = 0;
   console.log(RepeatedEqual);
   NumberList = [];
+  NumberListTwo = [];
   OperandChoice = "";
   NumberScreen.textContent = 0;
+  ArrayIncrementOnEqual = 0;
 });
 
 Percentage.addEventListener("click", () => {
@@ -209,7 +221,9 @@ PlusMinus.addEventListener("click", () => {
 Divide.addEventListener("click", () => {
   replaceOnDoubleOperand++;
   console.log(replaceOnDoubleOperand);
+
   NumberList.push(NumberScreen.textContent);
+
   OperandChoice = "Divide";
   AoR = 1;
 });
@@ -217,7 +231,9 @@ Divide.addEventListener("click", () => {
 Multiply.addEventListener("click", () => {
   replaceOnDoubleOperand++;
   console.log(replaceOnDoubleOperand);
-  NumberList.push(NumberScreen.textContent);
+
+    NumberList.push(NumberScreen.textContent);
+
   OperandChoice = "Multiply";
   AoR = 1;
 });
@@ -225,7 +241,9 @@ Multiply.addEventListener("click", () => {
 Subtract.addEventListener("click", () => {
   replaceOnDoubleOperand++;
   console.log(replaceOnDoubleOperand);
+
   NumberList.push(NumberScreen.textContent);
+
   OperandChoice = "Subtract";
   AoR = 1;
 });
@@ -233,7 +251,9 @@ Subtract.addEventListener("click", () => {
 Addition.addEventListener("click", () => {
   replaceOnDoubleOperand++;
   console.log(replaceOnDoubleOperand);
+
   NumberList.push(NumberScreen.textContent);
+
   OperandChoice = "Addition";
   AoR = 1;
 });
@@ -249,4 +269,35 @@ Decimal.addEventListener("click", () => {
 
 Equal.addEventListener('click', () => {
 
-});
+
+    if (OperandChoice === "Divide" ){
+      NumberList.push(NumberScreen.textContent);
+      let Answers = NumberList[ArrayIncrementOnEqual] / NumberList[NumberList.length-1];
+      NumberListTwo.push(Answers);
+      NumberScreen.textContent = Answers;
+      ArrayIncrementOnEqual++;
+    }
+
+    else if (OperandChoice === "Multiply"){
+      NumberList.push(NumberScreen.textContent);
+      let Answers = NumberList[ArrayIncrementOnEqual] * NumberList[NumberList.length-1];
+      NumberListTwo.push(Answers);
+      NumberScreen.textContent = Answers;
+      ArrayIncrementOnEqual++;
+    }
+    else if (OperandChoice === "Subtract"){
+      NumberList.push(NumberScreen.textContent);
+      let Answers = NumberList[ArrayIncrementOnEqual] - NumberList[NumberList.length-1];
+      NumberListTwo.push(Answers);
+      NumberScreen.textContent = Answers;
+      ArrayIncrementOnEqual++;
+    }
+    else if (OperandChoice === "Addition"){
+      NumberList.push(NumberScreen.textContent);
+      let Answers = +NumberList[ArrayIncrementOnEqual] + +NumberList[NumberList.length-1];
+      NumberListTwo.push(Answers);
+      NumberScreen.textContent = Answers;
+      ArrayIncrementOnEqual++;
+    }
+  });
+
