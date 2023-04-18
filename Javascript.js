@@ -290,8 +290,7 @@ Decimal.addEventListener("click", () => {
 });
 
 Equal.addEventListener('click', () => {
-
-
+    
     if (OperandChoice === "Divide" ){
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
