@@ -367,11 +367,17 @@ Equal.addEventListener('click', () => {
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
         let Answers = NumberListTwo[NumberListTwo.length-1] / NumberList[NumberList.length-1];
+        if (Answers === Infinity) {
+          Answers = "Error";
+        }
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
       } else {
         NumberList.push(NumberScreen.textContent);
         let Answers = NumberList[ArrayIncrementOnEqual] / NumberList[NumberList.length-1];
+        if (Answers === Infinity) {
+          Answers = "Error";
+        }
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
         ArrayIncrementOnEqual++;
