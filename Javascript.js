@@ -69,6 +69,13 @@ let TimeUpdate = () => {
 };
 setInterval(TimeUpdate, 1000);
 
+//Changes Button Color on press 
+
+const DivideColorChange = () => {
+  Divide.style.backgroundColor = "white";
+  Divide.style.color = "#f69906";
+}
+
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
   RepeatedEqual = 0;
@@ -219,6 +226,7 @@ PlusMinus.addEventListener("click", () => {
   });  
 
 Divide.addEventListener("click", () => {
+  DivideColorChange();
   if (NumberListTwo >= 1){
     OperandChoice = "Divide";
     AoR = 1;
