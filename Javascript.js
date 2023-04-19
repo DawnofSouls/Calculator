@@ -153,6 +153,11 @@ const ResetOperandColorChange = () => {
 Zero.addEventListener("click", () => {
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 0;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -172,6 +177,11 @@ Zero.addEventListener("click", () => {
 One.addEventListener("click", () => {
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 1;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -189,6 +199,11 @@ One.addEventListener("click", () => {
 Two.addEventListener("click", () => {
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 2;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -207,6 +222,11 @@ Two.addEventListener("click", () => {
 Three.addEventListener("click", () => {
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 3;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -225,6 +245,12 @@ Three.addEventListener("click", () => {
 Four.addEventListener("click", () => {
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 4;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
+    
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -243,6 +269,11 @@ Four.addEventListener("click", () => {
 Five.addEventListener("click", () => {
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 5;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -263,6 +294,11 @@ Six.addEventListener("click", () => {
 
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 6;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -281,6 +317,11 @@ Seven.addEventListener("click", () => {
 
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 7;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -300,6 +341,11 @@ Eight.addEventListener("click", () => {
 
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 8;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -319,6 +365,11 @@ Nine.addEventListener("click", () => {
 
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
+    if (AoR === 1) {
+      InputNumber = 9;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   } else {
     ResetOperandColorChange();
     RepeatedEqual = 0;
@@ -458,7 +509,11 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -483,7 +538,11 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -510,7 +569,11 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -532,7 +595,11 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -559,7 +626,11 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -581,7 +652,11 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -608,7 +683,12 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          let DecimalLength;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
@@ -630,7 +710,12 @@ Equal.addEventListener('click', () => {
           SplitNumbers = SplitNumbers.map(x => x.split(''));
         
           let IntegerLength = SplitNumbers[0].length;
-          let DecimalLength = SplitNumbers[1].length;
+          let DecimalLength;
+          if (typeof SplitNumbers[1] === 'undefined'){
+            DecimalLength = 0;
+          }else {
+            DecimalLength = SplitNumbers[1].length;
+          }
         
           if(IntegerLength > DecimalLength) {
             Answers = Answers.toExponential(2).toString();
