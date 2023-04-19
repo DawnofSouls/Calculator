@@ -76,6 +76,11 @@ const DivideColorChange = () => {
   Divide.style.color = "#f69906";
 }
 
+const MultiplyColorChange = () => {
+  Multiply.style.backgroundColor = "white";
+  Multiply.style.color = "#f69906";
+}
+
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
   RepeatedEqual = 0;
@@ -250,6 +255,7 @@ Divide.addEventListener("click", () => {
 // });
 
 Multiply.addEventListener("click", () => {
+  MultiplyColorChange();
   if (NumberListTwo >= 1){
     OperandChoice = "Multiply";
     AoR = 1;
