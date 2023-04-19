@@ -74,21 +74,45 @@ setInterval(TimeUpdate, 1000);
 const DivideColorChange = () => {
   Divide.style.backgroundColor = "white";
   Divide.style.color = "#f69906";
+  Multiply.style.backgroundColor = "";
+  Multiply.style.color = "";
+  Subtract.style.backgroundColor = "";
+  Subtract.style.color = "";
+  Addition.style.backgroundColor = "";
+  Addition.style.color = "";
 }
 
 const MultiplyColorChange = () => {
   Multiply.style.backgroundColor = "white";
   Multiply.style.color = "#f69906";
+  Divide.style.backgroundColor = "";
+  Divide.style.color = "";
+  Subtract.style.backgroundColor = "";
+  Subtract.style.color = "";
+  Addition.style.backgroundColor = "";
+  Addition.style.color = "";
 }
 
 const SubtractColorChange = () => {
   Subtract.style.backgroundColor = "white";
   Subtract.style.color = "#f69906";
+  Divide.style.backgroundColor = "";
+  Divide.style.color = "";
+  Multiply.style.backgroundColor = "";
+  Multiply.style.color = "";
+  Addition.style.backgroundColor = "";
+  Addition.style.color = "";
 }
 
 const AdditionColorChange = () => {
   Addition.style.backgroundColor = "white";
   Addition.style.color = "#f69906";
+  Divide.style.backgroundColor = "";
+  Divide.style.color = "";
+  Multiply.style.backgroundColor = "";
+  Multiply.style.color = "";
+  Subtract.style.backgroundColor = "";
+  Subtract.style.color = "";
 }
 
 //Onclick Number Functions
