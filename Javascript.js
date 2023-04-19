@@ -86,6 +86,11 @@ const SubtractColorChange = () => {
   Subtract.style.color = "#f69906";
 }
 
+const AdditionColorChange = () => {
+  Addition.style.backgroundColor = "white";
+  Addition.style.color = "#f69906";
+}
+
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
   RepeatedEqual = 0;
@@ -288,6 +293,7 @@ Subtract.addEventListener("click", () => {
 });
 
 Addition.addEventListener("click", () => {
+  AdditionColorChange();
   if (NumberListTwo >= 1){
     OperandChoice = "Addition";
     AoR = 1;
