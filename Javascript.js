@@ -63,7 +63,9 @@ let PushToOneOrTwo = 1;
 //Allows to successfully switch to another array when in middle of switching to another operand without clearing
 let OperandSwitch = 0;
 
-//Only Press Equal once to prevent pressing bugs if pressed again
+//Only Press Equal once to prevent pressing Equal again which causes bugs if pressed again.
+// 1 means its Enabled. 0 means its Disabled.
+let EqualEnableOrDisabled = 1;
 
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
