@@ -280,10 +280,7 @@ Percentage.addEventListener("click", () => {
 });
 
 PlusMinus.addEventListener("click", () => {
-    let InitialValue = NumberScreen.textContent;
-    let FinalValue;
-    FinalValue = InitialValue * -1;
-    NumberScreen.textContent = FinalValue;
+    NumberScreen.textContent = -NumberScreen.textContent;
   });  
 
 Divide.addEventListener("click", () => {
