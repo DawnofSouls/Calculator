@@ -63,6 +63,8 @@ let PushToOneOrTwo = 1;
 //Allows to successfully switch to another array when in middle of switching to another operand without clearing
 let OperandSwitch = 0;
 
+//Only Press Equal once to prevent pressing bugs if pressed again
+
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, "$1");
@@ -116,27 +118,6 @@ const AdditionColorChange = () => {
   Subtract.style.backgroundColor = "";
   Subtract.style.color = "";
 }
-
-// This is where we check the number length so it doesn't overflow. As long it's under length of 10, nothing is going to change but 
-// if it happens to  be greater than 10, it will either shorten the decimal or turn the number into short scientific notation
-let CheckNumberLength = () => {
-  if (Answers.toString().length > 10) {
-    let SplitNumbers = Answers.toString().split('.');
-    SplitNumbers = SplitNumbers.map(x => x.split(''));
-  
-    let IntegerLength = SplitNumbers[0];
-    let DecimalLength = SplitNumbers[1];
-  
-    if(IntegerLength.length > DecimalLength.length) {
-      Answers = Answers.toExponential(2).toString();
-    } else if (InputNumber.length < DecimalLength || IntegerLength.length === DecimalLength.length ){
-      Answers = Answers.toPrecision(3);
-      if (Answers.toString().length > 10) {
-        Answers = Answers.toExponential(2).toString();
-      }
-    }
-    
-  }};
 
 const ResetOperandColorChange = () => {
   Divide.style.backgroundColor = "";
@@ -391,6 +372,23 @@ Equal.addEventListener('click', () => {
         if (Answers === Infinity) {
           Answers = "Error";
         }
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
       } else {
@@ -399,6 +397,23 @@ Equal.addEventListener('click', () => {
         if (Answers === Infinity) {
           Answers = "Error";
         }
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
         ArrayIncrementOnEqual++;
@@ -409,11 +424,45 @@ Equal.addEventListener('click', () => {
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
         let Answers = NumberListTwo[NumberListTwo.length-1] * NumberList[NumberList.length-1];
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
       } else {
         NumberList.push(NumberScreen.textContent);
         let Answers = NumberList[ArrayIncrementOnEqual] * NumberList[NumberList.length-1];
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
         ArrayIncrementOnEqual++;
@@ -424,11 +473,45 @@ Equal.addEventListener('click', () => {
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
         let Answers = NumberListTwo[NumberListTwo.length-1] - NumberList[NumberList.length-1];
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
       } else {
         NumberList.push(NumberScreen.textContent);
         let Answers = NumberList[ArrayIncrementOnEqual] - NumberList[NumberList.length-1];
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
         ArrayIncrementOnEqual++;
@@ -439,11 +522,45 @@ Equal.addEventListener('click', () => {
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
         let Answers = +NumberListTwo[NumberListTwo.length-1] + +NumberList[NumberList.length-1];
+
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+          
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
       } else {
         NumberList.push(NumberScreen.textContent);
         let Answers = +NumberList[ArrayIncrementOnEqual] + +NumberList[NumberList.length-1];
+        
+        if (Answers.toString().length > 10) {
+          let SplitNumbers = Answers.toString().split('.');
+          SplitNumbers = SplitNumbers.map(x => x.split(''));
+        
+          let IntegerLength = SplitNumbers[0].length;
+          let DecimalLength = SplitNumbers[1].length;
+        
+          if(IntegerLength > DecimalLength) {
+            Answers = Answers.toExponential(2).toString();
+          } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+            Answers = Answers.toPrecision(3);
+            if (Answers.toString().length > 10) {
+              Answers = Answers.toExponential(2).toString();
+            }
+          }}
+
         NumberListTwo.push(Answers);
         NumberScreen.textContent = Answers;
         ArrayIncrementOnEqual++;
