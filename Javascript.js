@@ -20,7 +20,7 @@ const Seven = document.getElementById("SevenButtons");
 const Eight = document.getElementById("EightButtons");
 const Nine = document.getElementById("NineButtons");
 
-let GitHubLogo = document.getElementsByClassName("repo");
+let GitHubLogo = document.getElementById("repo");
 
 // Input Number Screen
 const NumberScreen = document.getElementById("Input");
@@ -425,3 +425,9 @@ Equal.addEventListener('click', () => {
 
   });
 
+// Misc
+
+GitHubLogo.addEventListener('click', () => {
+  window.open(
+    "https://github.com/DawnofSouls/Calculator/tree/main", "_blank");
+})
