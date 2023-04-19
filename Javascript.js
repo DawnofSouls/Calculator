@@ -117,6 +117,27 @@ const AdditionColorChange = () => {
   Subtract.style.color = "";
 }
 
+// This is where we check the number length so it doesn't overflow. As long it's under length of 10, nothing is going to change but 
+// if it happens to  be greater than 10, it will either shorten the decimal or turn the number into short scientific notation
+let CheckNumberLength = () => {
+  if (Answers.toString().length > 10) {
+    let SplitNumbers = Answers.toString().split('.');
+    SplitNumbers = SplitNumbers.map(x => x.split(''));
+  
+    let IntegerLength = SplitNumbers[0];
+    let DecimalLength = SplitNumbers[1];
+  
+    if(IntegerLength.length > DecimalLength.length) {
+      Answers = Answers.toExponential(2).toString();
+    } else if (InputNumber.length < DecimalLength || IntegerLength.length === DecimalLength.length ){
+      Answers = Answers.toPrecision(3);
+      if (Answers.toString().length > 10) {
+        Answers = Answers.toExponential(2).toString();
+      }
+    }
+    
+  }};
+
 const ResetOperandColorChange = () => {
   Divide.style.backgroundColor = "";
   Divide.style.color = "";
