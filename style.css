@@ -79,6 +79,9 @@ body {
     font-family: 'SFFontThin','Courier New', Courier, monospace;
     font-size: 90px;
 }
+#repo{
+    cursor: pointer;
+}
 
 #FirstRow,
 #SecondRow,
