@@ -115,8 +115,20 @@ const AdditionColorChange = () => {
   Subtract.style.color = "";
 }
 
+const ResetOperandColorChange = () => {
+  Divide.style.backgroundColor = "";
+  Divide.style.color = "#";
+  Multiply.style.backgroundColor = "";
+  Multiply.style.color = "";
+  Subtract.style.backgroundColor = "";
+  Subtract.style.color = "";
+  Addition.style.backgroundColor = "";
+  Addition.style.color = "";
+}
+
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "0";
@@ -129,6 +141,7 @@ Zero.addEventListener("click", () => {
 });
 
 One.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "1";
@@ -141,6 +154,7 @@ One.addEventListener("click", () => {
 });
 
 Two.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "2";
@@ -153,6 +167,7 @@ Two.addEventListener("click", () => {
 });
 
 Three.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "3";
@@ -165,6 +180,7 @@ Three.addEventListener("click", () => {
 });
 
 Four.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "4";
@@ -177,6 +193,7 @@ Four.addEventListener("click", () => {
 });
 
 Five.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "5";
@@ -189,6 +206,7 @@ Five.addEventListener("click", () => {
 });
 
 Six.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "6";
@@ -201,6 +219,7 @@ Six.addEventListener("click", () => {
 });
 
 Seven.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "7";
@@ -213,6 +232,7 @@ Seven.addEventListener("click", () => {
 });
 
 Eight.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "8";
@@ -225,6 +245,7 @@ Eight.addEventListener("click", () => {
 });
 
 Nine.addEventListener("click", () => {
+  ResetOperandColorChange();
   RepeatedEqual = 0;
   if (AoR === 0) {
     InputNumber += "9";
@@ -238,6 +259,7 @@ Nine.addEventListener("click", () => {
 
 //Onclick Tools Functions
 Clear.addEventListener("click", () => {
+  ResetOperandColorChange();
   replaceOnDoubleOperand = 0;
   InputNumber = 0;
   AoR = 0;
@@ -331,6 +353,7 @@ Addition.addEventListener("click", () => {
 });
 
 Decimal.addEventListener("click", () => {
+  ResetOperandColorChange();
   if (NumberScreen.textContent.includes('.')){
     // nothing happens
   }else{
@@ -340,7 +363,7 @@ Decimal.addEventListener("click", () => {
 });
 
 Equal.addEventListener('click', () => {
-    
+  ResetOperandColorChange();
     if (OperandChoice === "Divide" ){
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
