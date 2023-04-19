@@ -81,6 +81,11 @@ const MultiplyColorChange = () => {
   Multiply.style.color = "#f69906";
 }
 
+const SubtractColorChange = () => {
+  Subtract.style.backgroundColor = "white";
+  Subtract.style.color = "#f69906";
+}
+
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
   RepeatedEqual = 0;
@@ -269,6 +274,7 @@ Multiply.addEventListener("click", () => {
 });
 
 Subtract.addEventListener("click", () => {
+  SubtractColorChange();
   if (NumberListTwo >= 1){
     OperandChoice = "Subtract";
     AoR = 1;
