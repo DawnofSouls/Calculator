@@ -20,6 +20,8 @@ const Seven = document.getElementById("SevenButtons");
 const Eight = document.getElementById("EightButtons");
 const Nine = document.getElementById("NineButtons");
 
+let GitHubLogo = document.getElementsByClassName("repo");
+
 // Input Number Screen
 const NumberScreen = document.getElementById("Input");
 let InputNumber = 0;
