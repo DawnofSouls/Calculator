@@ -119,7 +119,7 @@ const AdditionColorChange = () => {
 
 const ResetOperandColorChange = () => {
   Divide.style.backgroundColor = "";
-  Divide.style.color = "#";
+  Divide.style.color = "";
   Multiply.style.backgroundColor = "";
   Multiply.style.color = "";
   Subtract.style.backgroundColor = "";
