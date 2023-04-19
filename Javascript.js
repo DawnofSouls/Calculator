@@ -67,6 +67,23 @@ let OperandSwitch = 0;
 // 1 means its Enabled. 0 means its Disabled.
 let EqualEnableOrDisabled = 1;
 
+//Maximum Number can be place 
+let MaxNumberInput = () => {
+  if (NumberScreen.textContent.length > 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "1";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 1;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
+  }
+}
 // Automatically set time on upper right of an element
 let Time = document.getElementById("Time");
 Time.textContent = new Date().toLocaleTimeString().replace(/(.*)\D\d+/, "$1");
@@ -134,133 +151,187 @@ const ResetOperandColorChange = () => {
 
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "0";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 0;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "0";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 0;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
+
 });
 
 One.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "1";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 1;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "1";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 1;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
 });
 
 Two.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "2";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 2;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "2";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 2;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
 });
 
 Three.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "3";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 3;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "3";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 3;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
 });
 
 Four.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "4";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 4;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "4";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 4;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
 });
 
 Five.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "5";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 5;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "5";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 5;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
+
 });
 
 Six.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "6";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 6;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "6";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 6;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
 });
 
 Seven.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "7";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 7;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "7";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 7;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
 });
 
 Eight.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "8";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 8;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "8";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 8;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
 });
 
 Nine.addEventListener("click", () => {
-  ResetOperandColorChange();
-  RepeatedEqual = 0;
-  if (AoR === 0) {
-    InputNumber += "9";
-    NumberScreen.textContent = Number(InputNumber);
-  } else if (AoR === 1) {
-    InputNumber = 9;
-    NumberScreen.textContent = Number(InputNumber);
-    AoR = 0;
+
+  if (NumberScreen.textContent.length >= 10){
+    //nothing happens, doesnt place number because it reached the max
+  } else {
+    ResetOperandColorChange();
+    RepeatedEqual = 0;
+    if (AoR === 0) {
+      InputNumber += "9";
+      NumberScreen.textContent = Number(InputNumber);
+    } else if (AoR === 1) {
+      InputNumber = 9;
+      NumberScreen.textContent = Number(InputNumber);
+      AoR = 0;
+    }
   }
+
 });
 
 //Onclick Tools Functions
@@ -276,6 +347,7 @@ Clear.addEventListener("click", () => {
   OperandChoice = "";
   NumberScreen.textContent = 0;
   ArrayIncrementOnEqual = 0;
+  EqualEnableOrDisabled = 1;
 });
 
 Percentage.addEventListener("click", () => {
@@ -291,6 +363,7 @@ PlusMinus.addEventListener("click", () => {
 
 Divide.addEventListener("click", () => {
   DivideColorChange();
+  EqualEnableOrDisabled = 1;
   if (NumberListTwo >= 1){
     OperandChoice = "Divide";
     AoR = 1;
@@ -315,6 +388,7 @@ Divide.addEventListener("click", () => {
 
 Multiply.addEventListener("click", () => {
   MultiplyColorChange();
+  EqualEnableOrDisabled = 1;
   if (NumberListTwo >= 1){
     OperandChoice = "Multiply";
     AoR = 1;
@@ -329,6 +403,7 @@ Multiply.addEventListener("click", () => {
 
 Subtract.addEventListener("click", () => {
   SubtractColorChange();
+  EqualEnableOrDisabled = 1;
   if (NumberListTwo >= 1){
     OperandChoice = "Subtract";
     AoR = 1;
@@ -343,6 +418,7 @@ Subtract.addEventListener("click", () => {
 
 Addition.addEventListener("click", () => {
   AdditionColorChange();
+  EqualEnableOrDisabled = 1;
   if (NumberListTwo >= 1){
     OperandChoice = "Addition";
     AoR = 1;
@@ -366,7 +442,9 @@ Decimal.addEventListener("click", () => {
 });
 
 Equal.addEventListener('click', () => {
-  ResetOperandColorChange();
+  if (EqualEnableOrDisabled === 1){
+    EqualEnableOrDisabled = 0;
+    ResetOperandColorChange();
     if (OperandChoice === "Divide" ){
       if (NumberListTwo.length >= 1){
         NumberList.push(NumberScreen.textContent);
@@ -568,6 +646,8 @@ Equal.addEventListener('click', () => {
         ArrayIncrementOnEqual++;
       }
     }
+  }
+  
 
   });
 
