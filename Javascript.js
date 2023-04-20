@@ -23,6 +23,7 @@ const Nine = document.getElementById("NineButtons");
 let GitHubLogo = document.getElementById("repo");
 
 // Input Number Screen
+const InputScreen = document.getElementById("Screen");
 const NumberScreen = document.getElementById("Input");
 let InputNumber = 0;
 NumberScreen.textContent = Number(InputNumber);
@@ -66,6 +67,20 @@ let OperandSwitch = 0;
 //Only Press Equal once to prevent pressing Equal again which causes bugs if pressed again.
 // 1 means its Enabled. 0 means its Disabled.
 let EqualEnableOrDisabled = 1;
+
+//Change Font size depending on how large is the input number 
+let FontSizeChange = () => {
+  if (NumberScreen.textContent.toString().length >= 9) {
+    InputScreen.style.fontSize = "77px";
+    InputScreen.style.padding = "10px 30px";
+  } else if (NumberScreen.textContent.toString().length >= 8) {
+    InputScreen.style.fontSize = "85px";
+    InputScreen.style.padding = "10px 28px";
+  } else {
+    InputScreen.style.fontSize = "";
+    InputScreen.style.padding = "";
+  }
+};
 
 //Maximum Number can be place 
 let MaxNumberInput = () => {
@@ -151,6 +166,7 @@ const ResetOperandColorChange = () => {
 
 //Onclick Number Functions
 Zero.addEventListener("click", () => {
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -175,6 +191,7 @@ Zero.addEventListener("click", () => {
 });
 
 One.addEventListener("click", () => {
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -197,6 +214,7 @@ One.addEventListener("click", () => {
 });
 
 Two.addEventListener("click", () => {
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -220,6 +238,7 @@ Two.addEventListener("click", () => {
 });
 
 Three.addEventListener("click", () => {
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -243,6 +262,7 @@ Three.addEventListener("click", () => {
 });
 
 Four.addEventListener("click", () => {
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -267,6 +287,7 @@ Four.addEventListener("click", () => {
 });
 
 Five.addEventListener("click", () => {
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -291,7 +312,7 @@ Five.addEventListener("click", () => {
 });
 
 Six.addEventListener("click", () => {
-
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -314,7 +335,7 @@ Six.addEventListener("click", () => {
 });
 
 Seven.addEventListener("click", () => {
-
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -338,7 +359,7 @@ Seven.addEventListener("click", () => {
 });
 
 Eight.addEventListener("click", () => {
-
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -362,7 +383,7 @@ Eight.addEventListener("click", () => {
 });
 
 Nine.addEventListener("click", () => {
-
+  FontSizeChange();
   if (NumberScreen.textContent.length >= 10){
     //nothing happens, doesnt place number because it reached the max
     if (AoR === 1) {
@@ -402,6 +423,7 @@ Clear.addEventListener("click", () => {
 });
 
 Percentage.addEventListener("click", () => {
+  FontSizeChange();
   let InitialValue = NumberScreen.textContent;
   let FinalValue;
   FinalValue = InitialValue / 100;
@@ -493,6 +515,7 @@ Decimal.addEventListener("click", () => {
 });
 
 Equal.addEventListener('click', () => {
+  FontSizeChange();
   if (EqualEnableOrDisabled === 1){
     EqualEnableOrDisabled = 0;
     ResetOperandColorChange();
