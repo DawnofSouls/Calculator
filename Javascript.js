@@ -424,10 +424,27 @@ Clear.addEventListener("click", () => {
 
 Percentage.addEventListener("click", () => {
   FontSizeChange();
-  let InitialValue = NumberScreen.textContent;
-  let FinalValue;
-  FinalValue = InitialValue / 100;
-  NumberScreen.textContent = FinalValue;
+  let Answers = NumberScreen.textContent / 100;
+  if (Answers.toString().length > 10) {
+    let SplitNumbers = Answers.toString().split('.');
+    SplitNumbers = SplitNumbers.map(x => x.split(''));
+  
+    let IntegerLength = SplitNumbers[0].length;
+    if (typeof SplitNumbers[1] === 'undefined'){
+      DecimalLength = 0;
+    }else {
+      DecimalLength = SplitNumbers[1].length;
+    }
+  
+    if(IntegerLength > DecimalLength) {
+      Answers = Answers.toExponential(2).toString();
+    } else if (IntegerLength < DecimalLength || IntegerLength === DecimalLength ){
+      Answers = Answers.toPrecision(3);
+      if (Answers.toString().length > 10) {
+        Answers = Answers.toExponential(2).toString();
+      }
+    }}
+  NumberScreen.textContent = Answers;
 });
 
 PlusMinus.addEventListener("click", () => {
